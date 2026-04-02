@@ -8,7 +8,7 @@ def test_write():
         last_entry = file.readlines()
         return last_entry[-1] 
     read_name = read_last_enrty()  
-    assert read_name == "adam\n"  # compares the read name to adam (i preset the last name for testing)  \n is because it starts new line
+    assert read_name == "adam\n"  # compares the read name to adam (i preset the last name for testing) \n is for starting new line
  
  
  
