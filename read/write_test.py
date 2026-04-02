@@ -1,30 +1,14 @@
-
+import adam_library
 def main():
  
- user_name = input("name?")
  test_write()
- def save_name(user_name):
-    with open ("names_list.txt","a") as file: # opens / crates .txt file to append. (with ensures it closes itself)
-        file.write(user_name + "\n")  # adds new name to file and creates a new line
-        print("saved")
-
-
- def read_last_enrty():
-    with open ("names_list.txt", "r") as file:   # reads the names_list.txt file
-        last_entry = file.readlines()
-        return last_entry[-1]  #[-1] indexes the bottom (most recent) entry       
-
-     
-
-
- def test_write():
+def test_write():
     
-    write_name = save_name(user_name)
-    read_name = read_last_enrty()
-    if write_name == read_name:
-     print("read/write do not correlate")
-
+    read_name = adam_library.read_last_enrty()
+    assert read_name == "adam"
  
-     if __name__ == "__main__":
-       main()    
+ 
+ 
+if __name__ == "__main__":
+     main()    
 
