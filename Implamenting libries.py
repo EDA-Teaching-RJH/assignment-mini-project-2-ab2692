@@ -17,4 +17,6 @@ def main():
  last_input = adam_library.read_last_enrty()
  print("last entry:", last_input)
 
+ 
+if __name__ == "__main__":
  main()
