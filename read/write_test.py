@@ -1,26 +1,25 @@
-import adam_library     # imports function 
+
 def main():
-
- user_name = adam_library.ask_name()        # uses premade function to save input as user_name  
-
- adam_library.say_hello(user_name)
-
- add_to_list = input("do you want to add your name to list? y/n")
-
- if add_to_list == "y":          # allows the user to refuse data collection 
-     adam_library.save_name(user_name)
-     print("name added to list")
- else: print("Name not added")
+ def save_name(user_name):
+    with open ("names_list.txt","a") as file: # opens / crates .txt file to append. (with ensures it closes itself)
+        file.write(user_name + "\n")  # adds new name to file and creates a new line
+        print("saved")
 
 
+ def read_last_enrty():
+    with open ("names_list.txt", "r") as file:   # reads the names_list.txt file
+        last_entry = file.readlines()
+        return last_entry[-1]  #[-1] indexes the bottom (most recent) entry       
 
- last_input = adam_library.read_last_enrty()  # calls read function from library 
- print("last entry:", last_input)             
+     
 
- ask_again = input("do you want to add another entry? y/n") # loop function asks to add another name and loops back to name entry
- if ask_again == "y":
-   main()
- else: print("session expired, Have a nice day")   # if selected anything but "y" code ends
+
+ def test_write():
+    name = input("name?") 
+    save_name(name)
+
+
 
 if __name__ == "__main__":
- main()
+  main()    
+
