@@ -1,0 +1,3 @@
+from adam_library import ask_name
+
+user_name = ask_name()
