@@ -3,7 +3,14 @@ import re
 
 def main():
 
- user_email = adam_library.ask_email()        # uses premade function to save input as user_name  
+  user_email = adam_library.ask_email()        # uses premade function to save input as user_name  
+
+  def email_checker(user_email):
+   pattern = r"^[a-zA-Z0-9.-_!@#$%^&*()_+=`~'/?,<>]+@[a-zA-Z.]+\.[.a-zA-Z0-9]"   
+   if re.match(pattern, user_email):
+     return True
+   else: return False
+ 
 
  adam_library.say_hello(user_email)
 
