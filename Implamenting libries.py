@@ -14,3 +14,5 @@ else: print("Name not added, have a nice day")
 
 
 
+last_input = adam_library.read_last_enrty()
+print("last entry:", last_input)

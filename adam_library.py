@@ -13,6 +13,7 @@ def save_name(user_name):
         print("saved")
 
         
-
-
-
+def read_last_enrty():
+    with open ("names_list.txt", "r") as file:
+        last_entry = file.readlines()
+        return last_entry[-1]
