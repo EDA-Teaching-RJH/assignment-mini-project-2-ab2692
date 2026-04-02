@@ -8,7 +8,7 @@ def test_write():
         last_entry = file.readlines()
         return last_entry[-1] 
     read_email = read_last_enrty()  
-    assert read_email == "adam@gmail.com\n"  # compares the read name to adam (i preset the last name for testing) \n is for starting new line
+    assert read_email == "adam@gmail.com\n"  # compares the read email to previous (i preset the last email for testing) \n is for starting new line
  
  
  
