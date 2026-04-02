@@ -1,6 +1,6 @@
 from adam_library import ask_name     # imports function 
 from adam_library import say_hello
 
-ask_name()        #saves user name
+user_name = ask_name()        # uses premade function to save input as user_name  
 
 say_hello(user_name)
