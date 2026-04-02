@@ -14,13 +14,13 @@ def main():
 
 
 
- last_input = adam_library.read_last_enrty()
- print("last entry:", last_input)
+ last_input = adam_library.read_last_enrty()  # calls read function from library 
+ print("last entry:", last_input)             
 
- ask_again = input("do you want to add another entry? y/n")
+ ask_again = input("do you want to add another entry? y/n") # loop function asks to add another name and loops back to name entry
  if ask_again == "y":
    main()
- else: print("session expired, Have a nice day")  
+ else: print("session expired, Have a nice day")   # if selected anything but "y" code ends
 
 if __name__ == "__main__":
  main()
