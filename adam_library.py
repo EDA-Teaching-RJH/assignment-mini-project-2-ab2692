@@ -9,7 +9,7 @@ def say_hello(user_name): # crates function, prints hello and the previously sav
 
 def save_name(user_name):
     with open ("names_list.txt","a") as file: # opens / crates .txt file to append. (with ensures it closes itself)
-        file.append(user_name + "\n")  # adds new name to file and creates a new line
+        file.write(user_name + "\n")  # adds new name to file and creates a new line
         print("saved")
 
         
