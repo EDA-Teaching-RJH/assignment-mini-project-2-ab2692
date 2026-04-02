@@ -1,16 +1,18 @@
 import adam_library     # imports function 
+import re 
+
 def main():
 
- user_name = adam_library.ask_name()        # uses premade function to save input as user_name  
+ user_email = adam_library.ask_email()        # uses premade function to save input as user_name  
 
- adam_library.say_hello(user_name)
+ adam_library.say_hello(user_email)
 
- add_to_list = input("do you want to add your name to list? y/n")
+ add_to_list = input("do you want to add your email to list? y/n")
 
  if add_to_list == "y":          # allows the user to refuse data collection 
-     adam_library.save_name(user_name)
-     print("name added to list")
- else: print("Name not added")
+     adam_library.save_email(user_email)
+     print("email added to list")
+ else: print("email not added")
 
 
 
