@@ -14,6 +14,6 @@ def save_name(user_name):
 
         
 def read_last_enrty():
-    with open ("names_list.txt", "r") as file:
+    with open ("names_list.txt", "r") as file:   # reads the names_list.txt file
         last_entry = file.readlines()
-        return last_entry[-1]
+        return last_entry[-1]  #[-1] indexes the bottom (most recent) entry

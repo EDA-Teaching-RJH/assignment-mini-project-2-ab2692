@@ -7,7 +7,7 @@ adam_library.say_hello(user_name)
 
 add_to_list = input("do you want to add your name to list? y/n")
 
-if add_to_list == "y":
+if add_to_list == "y":          # allows the user to refuse data collection 
     adam_library.save_name(user_name)
     print("name added to list")
 else: print("Name not added, have a nice day")
