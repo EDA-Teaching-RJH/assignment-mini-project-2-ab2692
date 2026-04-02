@@ -1,5 +1,8 @@
 
 def main():
+ 
+ user_name = input("name?")
+ test_write()
  def save_name(user_name):
     with open ("names_list.txt","a") as file: # opens / crates .txt file to append. (with ensures it closes itself)
         file.write(user_name + "\n")  # adds new name to file and creates a new line
@@ -15,11 +18,13 @@ def main():
 
 
  def test_write():
-    name = input("name?") 
-    save_name(name)
+    
+    write_name = save_name(user_name)
+    read_name = read_last_enrty()
+    if write_name == read_name:
+     print("read/write do not correlate")
 
-
-
-if __name__ == "__main__":
-  main()    
+ 
+     if __name__ == "__main__":
+       main()    
 
