@@ -1,8 +1,8 @@
 import adam_library     # imports function 
 import re 
 def email_checker(user_email):
-   pattern = r"^[a-zA-Z0-9.-_!@#$%^&*()_+=`~'/?,<>]+@[a-zA-Z.]+.[.a-zA-Z0-9]"   
-   if re.match(pattern, user_email):
+   pattern = r"^[a-zA-Z0-9.-_!@#$%^&*()_+=`~'/?,<>]+@[a-zA-Z.]+\.[.a-zA-Z0-9]"       # reg ex implamentation to only allow formatted emails
+   if re.match(pattern, user_email):                                                # i.e: [letters, numbers, special characters]@[letters].[letters, . numbers]
      return True
    else: return False
 
