@@ -1,9 +1,12 @@
 
 def ask_name():
-    name=input("what is your name?")
+    user_name =input("what is your name?")
 
-def say_hello():
-    print("hello" user_name)
+
+def say_hello(user_name):
+    print("hello", user_name)
+
+
 
         
 
