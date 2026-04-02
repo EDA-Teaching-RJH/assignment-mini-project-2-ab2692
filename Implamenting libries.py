@@ -18,7 +18,7 @@ def main():
  print("last entry:", last_input)
 
  ask_again = input("do you want to add another entry? y/n")
- if ask_again == y:
+ if ask_again == "y":
    main()
  else: print("session expired, Have a nice day")  
 
